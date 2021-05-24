@@ -1,0 +1,32 @@
+ A Red-Black tree is a self-balancing binary search tree where every node obeys the following rules.
+ 
+(a) Every node is either red or black
+(b) The root is always black
+(c) There are no two adjacent red nodes (A red node cannot have a red parent or red child)
+(d) All paths from a node to descendant nodes contain the same number of black nodes
+
+Write a program to create a Red Black Tree from the given input. Your program should include
+the following function
+• InsertRedBlack(struct node* root, key) : Inserts a new node with the ‘key’ into the tree
+and prints parenthesized representation (with corresponding colors) of the created red-black
+tree.
+
+
+Input Format:
+• Every line of the input contains a positive integer “key”: Call function InsertRedBlack(root,
+key)
+
+Output Format:
+• For each line of the input, the corresponding line of the output should contain the parenthesis
+representation (key value followed by color) of the current tree.
+
+
+
+Sample Input                                   Output
+25                                           ( 25 B ( ) ( ) )
+18                                          ( 25 B ( 18 R ( ) ( ) ) ( ) )
+50                                          ( 25 B ( 18 R ( ) ( ) ) ( 50 R ( ) ( ) ) )
+80                                          ( 25 B ( 18 B ( ) ( ) ) ( 50 B ( ) ( 80 R ( ) ( ) ) ) )
+12                                           ( 25 B ( 18 B ( 12 R ( ) ( ) ) ( ) ) ( 50 B ( ) ( 80 R ( ) ( ) ) ) )
+100                                          ( 25 B ( 18 B ( 12 R ( ) ( ) ) ( ) ) ( 80 B ( 50 R ( ) ( ) ) ( 100 R ( ) ( ) ) ) )
+34                                           ( 25 B ( 18 B ( 12 R ( ) ( ) ) ( ) ) ( 80 R ( 50 B ( 34 R ( ) ( ) ) ( ) ) ( 100 B ( ) ( ) ) ) )
